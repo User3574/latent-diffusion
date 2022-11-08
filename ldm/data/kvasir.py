@@ -128,7 +128,7 @@ def generateCSV(dir, train=0.9, eval=0.1):
     def write_lines(file, lines):
         with open(file, 'w') as f:
             for line in lines:
-                f.write(line)
+                f.write(os.path.basename(line))
                 f.write('\n')
 
     files = glob.glob(dir)
